@@ -1,0 +1,23 @@
+side_one = int(input('Primeiro Segmento:'))
+side_two = int(input('Segundo Segmento:'))
+side_tree = int(input('Terceiro Segmento:'))
+# Definindo se os segmentos podem formar um triângulo (a soma de dois segmentos precisa ser maior que o 3º segmento)
+if side_one + side_two > side_tree and side_one + side_tree > side_two and side_two + side_tree > side_one:
+    print('PODEM FORMAR UM TRIÂNGULO!')
+    
+    # Definndo a condição de triângulo Isóceles (dois lados iguais) 
+    if side_one - side_two == 0 and side_tree != side_one:
+        print('O Triângulo é Isóceles!') 
+    if side_one - side_tree == 0 and side_two != side_one:
+        print('O Triâgnulo é isósceles!')
+    if side_two - side_tree == 0 and side_one != side_two:
+        print('O Triângulo é Isóceles!')
+    # Definindo a condição de triângulo Equilátero (todos lados iguais)
+    if side_one == side_tree == side_two:
+        print("O Triângulo é Equilátero!") 
+    # Definindo a condição de triângulo Escaleno (todos lados diferentes)
+    if side_one != side_tree != side_two:
+        print("O Triângulo é Escaleno")
+
+else:
+    print('NÃO PODEM FORMAR UM TRIÂNGULO!')
